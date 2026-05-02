@@ -15,14 +15,6 @@ namespace TaskFlowApp.Controllers
             _context = context;
         }
 
-        [HttpPost("register")]
-        public async Task<IActionResult> Create(User user)
-        {
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
-            return Ok(user);
-        }
-
         [HttpGet]
         public IActionResult Get()
         {
